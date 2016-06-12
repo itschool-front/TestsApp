@@ -1,0 +1,13 @@
+<h2>All tests</h2>
+ <ul>
+       <li ng-repeat="test in vm.allTests">
+           <h2>{{test.description}}</h2>
+           <ul>
+               <li ng-repeat="question in test.questions">{{question.description}}
+                   <ul>
+                       <li ng-repeat="answer in question.answers">{{answer.description}}</li>
+                   </ul>
+               </li>
+           </ul>
+       </li>
+   </ul>

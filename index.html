@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <title>My project 01</title>
 </head>
-<body ng-app="app" ng-controller="main as vm">
+<body ng-app="app">
     
     
-   {{vm.message}}
+   <div ui-view="header"></div>
+   <div ui-view="content"></div>
+   
+  
    
    
     
     <!--vendor-->
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lodash.core.min.js"></script>
+    
+    <!--modules-->
+    <script src="common/commonServices.js"></script>
+    
+    <!--services-->
+    <script src="common/responseTransformer.js"></script>
+    <script src="common/testAPI.js"></script>
+    
     <!--app-->
     <script src="app/app.js"></script>
+    
     <!--controllers-->
-    <script src="app/main.js"></script>
+    <script src="app/alltests/alltests.js"></script>
+    <script src="app/test/test.js"></script>
 </body>
 </html>

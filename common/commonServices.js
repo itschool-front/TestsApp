@@ -1,3 +1,4 @@
 (function () {
-    angular.module('commonServices', ['ngResource']);
+    angular.module('app.commonServices', [])
+        .constant('appSettings', {APIBaseURL: 'http://itschool.ocr-service.net:1337'});
 })()

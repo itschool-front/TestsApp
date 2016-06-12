@@ -1,7 +1,48 @@
 (function () {
     "use strict";
     
-    var app = angular.module('app', []);
+    angular.module('app', ['app.commonServices', 'ui.router'])
+        .config(function ($stateProvider, $urlRouterProvider) {
+         
+           $urlRouterProvider.otherwise("/app");
+            
+            $stateProvider
+            
+                .state('welcome', {
+                   url: '/welcome',
+                   views: {
+                       "header": {templateUrl: "app/partials/header.html"},
+                       "content": {templateUrl: "app/partials/welcome.html"}
+                   } 
+                })
+                
+                .state('app', {
+                   url: '/app',
+                   views: {
+                       "header": {templateUrl: "app/partials/header.html"},
+                       "content": {templateUrl: "app/partials/content.html"}
+                   } 
+                })
+                
+                .state('app.alltests', {
+                    url: '/alltests',
+                    templateUrl: 'app/alltests/alltests.html',
+                    controller: "allTestsController as vm"
+                })
+                
+                .state('app.test', {
+                    url: '/test/:testId',
+                    templateUrl: "app/test/test.html",
+                    controller: "testController as vm",
+                    resolve: {
+                        testAPI: 'testAPI',
+                        
+                        singleTest: function(testAPI, $stateParams){
+                           return testAPI.getSingleTest($stateParams.testId);
+                        }
+                    }
+                });//stste app.test end
+        });
     
     
 })()
