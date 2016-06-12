@@ -9,12 +9,9 @@
         var vm = this;
         vm.message = "Hello from test";
         
-        console.log(singleTest.data);
+        vm.test = singleTest.data;
         
-       /* singleTest.then(function (test) {
-            console.log(test);
-        })*/
-        
+       
         
         
     }

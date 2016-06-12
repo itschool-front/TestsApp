@@ -46,6 +46,7 @@
                 },
                 
                 
+                
              getSingleTest:
                 function(APIResponse){
                    
@@ -67,6 +68,7 @@
                     };
                 },
                 
+            
             
              getQuestionAnswers:
                 function(APIResponse){

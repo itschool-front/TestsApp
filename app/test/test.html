@@ -1,6 +1,9 @@
-<h2>
-    
-Test
-</h2>
+<h2>{{vm.test.description}}</h2>
 
-{{vm.message}}
+<ul>
+    <li ng-repeat="question in vm.test.questions">{{question.description}}
+       <!-- <ul>
+            <li ng-repeat="answer in question.answers">{{answer.description}}</li>
+        </ul>-->
+    </li>
+</ul>
