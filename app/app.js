@@ -34,13 +34,31 @@
                     url: '/test/:testId',
                     templateUrl: "app/test/test.html",
                     controller: "testController as vm",
+                    
                     resolve: {
                         testAPI: 'testAPI',
                         
                         singleTest: function(testAPI, $stateParams){
-                           return testAPI.getSingleTest($stateParams.testId);
-                        }
+                           return testAPI.getSingleTest($stateParams.testId)
+                                    .then(function(test){
+                                        
+                                        test.data.questions.forEach(function(question){
+                                                testAPI.getQuestionAnswers(question.id)
+                                                    .then(function(answers){
+                                                      question.answers = answers.data;
+                                                    });
+                                         }); 
+                                            
+                                         return test;           
+                                    });
+                                        
+                        
+                    
+                
+            
+                         }
                     }
+                   
                 });//stste app.test end
         });
     

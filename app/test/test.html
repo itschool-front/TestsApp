@@ -2,8 +2,8 @@
 
 <ul>
     <li ng-repeat="question in vm.test.questions">{{question.description}}
-       <!-- <ul>
-            <li ng-repeat="answer in question.answers">{{answer.description}}</li>
-        </ul>-->
+        <ul>
+            <li ng-repeat="answer in question.answers">{{answer}}</li>
+        </ul>
     </li>
 </ul>

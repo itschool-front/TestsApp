@@ -75,9 +75,7 @@
                     var response = JSON.parse(APIResponse);
                     
                     var answers = _.map(response.answers, function(answer){
-                        return {
-                            description: answer.description
-                        };
+                        return answer.description;
                     });
                     
                     return answers;
