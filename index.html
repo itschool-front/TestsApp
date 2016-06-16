@@ -2,44 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>My project 01</title>
     
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     
     <style>
-        body { padding-top: 70px;
-               background: url('img/tessellation.jpg');
+        body { 
+               position: relative;
+               padding-top: 70px;
+               background-image: url('img/tessellation.jpg');
+               background-attachment: fixed;
          }
          
          .navbar.navbar-default.navbar-fixed-top{
-             box-shadow: 0px 5px 10px #ccc;
+             box-shadow: 0px 3px 7px #dde;
+             background-color: #fafbff;
+             /*background-color: white;*/
+            /* height: 1em;*/
+             
+            /* background-color: rgba(255,255,255,.6);*/
+            /* border: none;*/
+            
+             
          }
          
          .welcome h1{
-             font-family: 'Oswald', sans-serif;
+             font-family: 'Oswald', Arial, Helvetica, sans-serif;
              font-size: 4em;
-             color: #606060;
+             /*color: #00bcd4;*/
+             color: #ff5252;
+             color: #5bbc2e;
+             color: navy;
+             color: midnightblue;
              margin-top: 3em;
+             /*text-shadow:  0px 5px 6px #aaa;*/
+         }
+         
+         .navbar-default .navbar-brand{
+             color: midnightblue;
          }
          
          .welcome p{
-             font-size: 1.5em;
+             font-size: 1.6em;
              color: #606060;
+             margin-top: 2.2em;
+             text-align: center;
          }
          
          .welcome-btn{
-             padding: 3em 12em 0 12em;
+             padding: 2em 10em 0 10em;
              text-align: center;
          }
          
          .welcome-btn .btn-block{
              margin-top: .8em;
-            /* background-color: #e7e7e7;*/
+             color: #37a000;
+             color: navy;
+             color: tomato;
+             color: #ef7000;
+             color: dodgerblue;
+             color: crimson;
+             border-color: #37a000;
+             border-color: tomato;
+             border-color: #ef7000;
+             border-color: dodgerblue;
+             border-color: crimson;
+             background-color: transparent;
          }
          
-         .more-inf{
-           line-height: 5em;
+         .btn.btn-default.btn-block.register-btn{
+             background-color: #37a000;
+             background-color: tomato;
+             background-color: #ef7000;
+             background-color: dodgerblue;
+             background-color: crimson;
+                /*background-color: transparent;*/
+             color: #ff5252;
+             color: rebeccapurple;
+             color: white;
+           /*  color: #ef7000;*/
+             
+             /*border-color: #ff5252;
+             border-color: rebeccapurple;*/
+         }
+         
+         .more-info{
+           margin-top: 12em;
+           padding: 2em 3em;
+           background-color: #fafbff;
+           /*background-color: lightcyan;*/
+           
+           color: #444;
+           border-top: 1px solid #ddd;
+           color: #494949;
+           /*color: white;*/
+         }
+         
+         .more-info h3, .more-info h2{
+             font-weight: bold;
+             display: block;
+             text-align: center;
+             line-height: 2.5em;
+             color: crimson;
          }
          
     </style>
@@ -48,7 +115,7 @@
 
     
 
-<body ng-app="app">
+<body ng-app="app"  data-spy="scroll" data-target="#navbar-example">
     
     
     <div class="container-fluid">
@@ -91,5 +158,6 @@
     <script src="app/test/test.js"></script>
     <script src="app/available/available.js"></script>
     <script src="app/login/login.js"></script>
+    <script src="app/partials/welcome.js"></script>
 </body>
 </html>
