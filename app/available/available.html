@@ -1,0 +1,71 @@
+<div class="row" ng-if="vm.user.isLoggedIn">
+
+    <div class="col-xs-12">
+
+        <div class="panel panel-default" ng-repeat="test in vm.tests">
+
+
+            <div class="panel-heading">
+                <h3>{{test.data.description}}</h3></div>
+            <div class="panel-body">
+
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="question in test.data.questions">
+
+                        <h4>
+                    
+                        {{($index+1)+") "+question.description}}    
+                        
+                    </h4>
+
+                        <hr>
+
+                        <img class="img-responsive" ng-if="question.picture" src="http://itschool.ocr-service.net:1337/question/picture/{{question.id}}">
+
+
+
+                        <ul ng-if="question.answerType == 'multi'">
+                            <li ng-repeat="answer in question.answers track by $index">
+                                <input type="checkbox" ng-true-value="{{ {test: test.data.id, question: question.id, answer: answer.id} }}" ng-model="vm.multiAnswers[answer.id]">                                {{answer.description}}
+                            </li>
+                        </ul>
+
+                        <ul ng-if="question.answerType == 'single'">
+                            <li ng-repeat="answer in question.answers track by $index">
+                                <input type="radio" ng-value="{test: test.data.id, question: question.id, answer: answer.id}" name="{{question.id}}" ng-model="vm.singleAnswers[question.id]">                                {{answer.description}}
+                            </li>
+                        </ul>
+
+                        <div ng-if="question.answerType == 'free'">
+                            <textarea name="free" id="" cols="30" rows="10"></textarea>
+                        </div>
+
+                    </li>
+                </ul>
+
+
+            </div>
+
+
+
+
+
+
+            <!--
+<pre>
+{{ vm.multiAnswers | json }}
+{{vm.singleAnswers | json}}
+</pre>-->
+
+
+
+        </div>
+        <input type="button" ng-click="vm.submitAnswers()">
+
+
+
+    </div>
+
+
+</div>
+<!--row-->

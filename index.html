@@ -3,28 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>My project 01</title>
+    
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    
+    <style>
+        body { padding-top: 70px;
+               background: url('img/tessellation.jpg');
+         }
+         
+         .navbar.navbar-default.navbar-fixed-top{
+             box-shadow: 0px 5px 10px #ccc;
+         }
+         
+         .welcome h1{
+             font-family: 'Oswald', sans-serif;
+             font-size: 4em;
+             color: #606060;
+             margin-top: 3em;
+         }
+         
+         .welcome p{
+             font-size: 1.5em;
+             color: #606060;
+         }
+         
+         .welcome-btn{
+             padding: 3em 12em 0 12em;
+             text-align: center;
+         }
+         
+         .welcome-btn .btn-block{
+             margin-top: .8em;
+            /* background-color: #e7e7e7;*/
+         }
+         
+         .more-inf{
+           line-height: 5em;
+         }
+         
+    </style>
+    
 </head>
+
+    
+
 <body ng-app="app">
     
     
-   <div ui-view="header"></div>
-   <div ui-view="content"></div>
+    <div class="container-fluid">
+        
+            <div class="row">
+                <div ui-view="header" class="col-sm-12"></div>
+                <div ui-view="content" class="col-sm-12"></div>
+            </div>
+        
+    </div>
    
   
    
    
     
     <!--vendor-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="lodash.core.min.js"></script>
+    
+    
     
     <!--modules-->
     <script src="common/commonServices.js"></script>
+    <script src="common/testAPIMock.js"></script>
     
     <!--services-->
     <script src="common/responseTransformer.js"></script>
     <script src="common/testAPI.js"></script>
+    <script src="common/user.js"></script>
     
     <!--app-->
     <script src="app/app.js"></script>
@@ -32,5 +89,7 @@
     <!--controllers-->
     <script src="app/alltests/alltests.js"></script>
     <script src="app/test/test.js"></script>
+    <script src="app/available/available.js"></script>
+    <script src="app/login/login.js"></script>
 </body>
 </html>

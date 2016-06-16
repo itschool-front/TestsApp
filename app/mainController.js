@@ -7,7 +7,12 @@
         
         vm.message = "Hello World!";
         
-        vm.allTests = [];
+        
+      
+      
+      
+      
+      
         
        /* 
         getAllTests().then(function (data) {
@@ -15,7 +20,7 @@
         });*/
  
         
-        function getAllTests() {
+ /*       function getAllTests() {
             
            return testAPI.getAllTests()
                .then(function (data) {
@@ -44,7 +49,7 @@
                
                }); 
             
-        }/*end getAllTests()*/
+        }
         
         
        
@@ -70,10 +75,10 @@
                                         });
                                 });
                             });
-                    });/*end tests.forEach*/
+                    });
                     return tests;
                });     
-        }/*end getAllTests_v2()*/  
+        }*/
     }
     
 })()

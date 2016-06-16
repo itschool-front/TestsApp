@@ -13,6 +13,15 @@
                  });
             },
             
+            
+            getTestsAvailable: function () {
+                return $http({ method: 'GET', 
+                                  url: appSettings.APIBaseURL + '/test/available/',
+                    transformResponse: apiResponseTransform.getTestsAvailable 
+                 });
+            },
+            
+            
             getTestQuestions: function (id) {
                 return $http({ method: 'GET', 
                                   url: appSettings.APIBaseURL + '/test/' + id,
@@ -27,13 +36,20 @@
                  });
             },
             
+         
             getQuestionAnswers: function (id) {
                 return $http({ method: 'GET', 
                                   url: appSettings.APIBaseURL + '/question/' + id,
                     transformResponse: apiResponseTransform.getQuestionAnswers 
                  });
             },
-            
+           
+            submitTestAnswers: function (answers) {
+                return $http({ method: 'POST', 
+                                  url: appSettings.APIBaseURL + '/passedTest/create/',
+                                 data: answers 
+                 });
+            }, 
         }
     }
         
