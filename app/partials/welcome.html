@@ -1,92 +1,176 @@
-<div class="row">
+<div id="scrollArea" class="row">
+
+    <style>
+        .typed-cursor {
+            opacity: 1;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
 
 
-    <div class="col-sm-1 col-md-3"></div>
-    <div class="col-sm-12 col-md-6 welcome">
-        <h1># DataArt / IT School / 2016 _</h1>
+    <!--<div class="col-sm-1 col-md-2"></div>-->
+    <div class="col-xs-12 col-sm-10 col-xs-offset-0  col-sm-offset-1 welcome">
+        <!--<h1># DataArt / IT School / 2016 _</h1>-->
+        <!--<div id="typed-strings"><p># DataArt / IT School / 2016 <span class="typed-cursor">_</span></p></div>-->
+        <div id="typed-strings"><p>IT School<span class="crimson">@</span>DataArt:~ / 2016 <span class="typed-cursor">_</span></p></div>
+        <span id="typed"></span>
+        
         <div class="welcome-msg">
 
             <p>DataArt приглашает студентов и молодых IT-специалистов на бесплатные курсы для начинающих в IT.</p>
 
             <div class="welcome-btn">
                 <a ui-sref="login" class="btn btn-default btn-block register-btn">Регистрация</a>
-                <a href="" ng-click="vm.gotoMore()" class="btn btn-default btn-block">Подробнее</a>
+                <a href="" ng-click="vm.gotoElement('more-info')" class="btn btn-default btn-block">Подробнее</a>
             </div>
 
         </div>
     </div>
-    <div class="col-sm-1 col-md-3"></div>
+    <div class="col-sm-1 col-md-2"></div>
 
 </div>
-<div id="more-info" class="row">
-    <div class="col-sm-1 col-md-1"></div>
-    <div class="col-sm-1 col-md-10 panel panel-default more-info">
+
+
+<div class="row" id="more-info">
+    <!--<div id="more-info" class="col-sm-1 col-md-1"></div>-->
+    <div class="col-xs-12 col-sm-10 col-xs-offset-0 col-sm-offset-1 panel panel-default more-info">
         <h2>Открыт набор в IT School Odessa 2015</h2>
         <hr>
-        <p class="lead">Дорогие друзья, DataArt приглашает студентов и молодых IT-специалистов на бесплатные курсы для начинающих в IT. DataArt
+        <p class="lead"> &nbsp;&nbsp;&nbsp;&nbsp;   Дорогие друзья, DataArt приглашает студентов и молодых IT-специалистов на бесплатные курсы для начинающих в IT. DataArt
             поможет сориентироваться в потоке технологий, понять основные тенденции, познакомит со своей корпоративной культурой.
             Программа состоит из курса лекций и домашних заданий, по результатам курсов выпускники получат диплом. Подать
             заявку можно с 21 по 27 сентября по ссылке.</p>
 
         <h3>Программа курса DataArt IT School</h3>
         <div class="row">
-        
-            <div class="col-md-2"></div>    
+
+            <div class="col-md-2"></div>
             <div class="col-md-8">
                 <table class="table table-condensed">
-            <tr>
-                <td>30.09</td><td>Обзор IT-индустрии, про DataArt и IT School.</td>
-            </tr>
-            <tr>
-                <td>07.10</td><td>Обзор технологий.</td>
-            </tr>
-            <tr>
-                <td>14.10</td><td>Системы контроля версий.</td>
-            </tr>
-            <tr>
-                <td>21.10</td><td>Введение в .NET.</td>
-            </tr>
-            <tr>
-                <td>28.10</td><td>Основы HTML и веб</td>
-            </tr>
-            <tr>
-                <td>04.11</td><td>Фронтенд — тренды и фреймворки.</td>
-            </tr>
-            <tr>
-                <td>11.11</td><td>Введение в Ruby.</td>
-            </tr>
-            <tr>
-                <td>18.11</td><td>Требования,
-        задачи, критерии приемки.</td>
-            </tr>
-            <tr>
-                <td>02.12</td><td>Автоматическое тестирование.</td>
-            </tr>
-            <tr>
-                <td>09.12</td><td>Обзор кода, парное
-        программирование, паттерны.</td>
-            </tr>
-            <tr>
-                <td>16.12</td><td>Методологии разработки, непрерывная интеграция.</td>
-            </tr>
-           
-        </table>
+                    <tr>
+                        <td>30.09</td>
+                        <td>Обзор IT-индустрии, про DataArt и IT School.</td>
+                    </tr>
+                    <tr>
+                        <td>07.10</td>
+                        <td>Обзор технологий.</td>
+                    </tr>
+                    <tr>
+                        <td>14.10</td>
+                        <td>Системы контроля версий.</td>
+                    </tr>
+                    <tr>
+                        <td>21.10</td>
+                        <td>Введение в .NET.</td>
+                    </tr>
+                    <tr>
+                        <td>28.10</td>
+                        <td>Основы HTML и веб</td>
+                    </tr>
+                    <tr>
+                        <td>04.11</td>
+                        <td>Фронтенд — тренды и фреймворки.</td>
+                    </tr>
+                    <tr>
+                        <td>11.11</td>
+                        <td>Введение в Ruby.</td>
+                    </tr>
+                    <tr>
+                        <td>18.11</td>
+                        <td>Требования, задачи, критерии приемки.</td>
+                    </tr>
+                    <tr>
+                        <td>02.12</td>
+                        <td>Автоматическое тестирование.</td>
+                    </tr>
+                    <tr>
+                        <td>09.12</td>
+                        <td>Обзор кода, парное программирование, паттерны.</td>
+                    </tr>
+                    <tr>
+                        <td>16.12</td>
+                        <td>Методологии разработки, непрерывная интеграция.</td>
+                    </tr>
+
+                </table>
             </div>
             <div class="col-md-2"></div>
         </div>
-        
+
         <br><br>
         <p class="lead">
-        При каждом наборе мы получаем
-        заявок в несколько раз больше, чем мест в зале. Поэтому для записи на курсы необходимо заполнить анкету и пройти
-        тест. Обратите внимание, что анкета — главный критерий отбора кандидатов. Она состоит из трех частей: вопросы о вас,
-        тест на знание английского и задания на понимание основ программирования. В среднем на заполнение всех полей уходит
-        минут 20. Чем более полными, развернутыми и грамотными будут ответы на свободные вопросы, тем больше шансов, что
-        именно вас пригласят в этот набор. Анкеты принимаются до 27 сентября. 29 сентября всем записавшимся мы отправим письма
-            
+            &nbsp;&nbsp;&nbsp;&nbsp;При каждом наборе мы получаем заявок в несколько раз больше, чем мест в зале. Поэтому для записи на курсы необходимо заполнить
+            анкету и пройти тест. Обратите внимание, что анкета — главный критерий отбора кандидатов. Она состоит из трех
+            частей: вопросы о вас, тест на знание английского и задания на понимание основ программирования. В среднем на
+            заполнение всех полей уходит минут 20. Чем более полными, развернутыми и грамотными будут ответы на свободные
+            вопросы, тем больше шансов, что именно вас пригласят в этот набор. Анкеты принимаются до 27 сентября. 29 сентября
+            всем записавшимся мы отправим письма
+
         </p>
-        
-       
+
+
     </div>
-    <div class="col-sm-1 col-md-1"></div>
+    <!--<div class="col-sm-1 col-md-1"></div>-->
 </div>
+
+<script>
+   $(function(){
+        $("#typed").typed({
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 100
+        });
+        
+         $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+  
+    });
+
+</script>

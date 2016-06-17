@@ -13,80 +13,82 @@
         body { 
                position: relative;
                padding-top: 70px;
-               background-image: url('img/tessellation.jpg');
+               background-image: url('img/pattern-2.svg');
                background-attachment: fixed;
+               background-size: cover;
+               background-position: center;
          }
          
          .navbar.navbar-default.navbar-fixed-top{
-             box-shadow: 0px 3px 7px #dde;
-             background-color: #fafbff;
-             /*background-color: white;*/
-            /* height: 1em;*/
-             
-            /* background-color: rgba(255,255,255,.6);*/
-            /* border: none;*/
+             /*box-shadow: 0px 3px 7px #3355ff;*/
+             border: none;
             
              
          }
          
-         .welcome h1{
+         .welcome #typed{
              font-family: 'Oswald', Arial, Helvetica, sans-serif;
-             font-size: 4em;
-             /*color: #00bcd4;*/
-             color: #ff5252;
-             color: #5bbc2e;
-             color: navy;
+             font-size: 2.5em;
              color: midnightblue;
-             margin-top: 3em;
-             /*text-shadow:  0px 5px 6px #aaa;*/
+             margin-top: 1.5em;
+             display: block;
+             text-align: center;
          }
+         
+         .crimson{
+             color: crimson;
+         }
+       
          
          .navbar-default .navbar-brand{
              color: midnightblue;
+             color: crimson;
+             font-family: Arial, Helvetica, sans-serif;
+             /*font-weight: bold;*/
+             /*letter-spacing: .03em;*/
          }
          
+         .navbar-default .navbar-nav > li > a{
+             color: midnightblue;
+             font-family: Arial, Helvetica, sans-serif;
+             text-transform: uppercase;
+         }
+         
+         .navbar-default .navbar-nav > li > a:hover{
+             background-color: crimson;
+             color: white;
+         }
+         
+         .navbar-default .navbar-nav > li > a:focus{
+             background-color: crimson;
+             color: white;
+         }
+         
+         
          .welcome p{
-             font-size: 1.6em;
-             color: #606060;
-             margin-top: 2.2em;
+             font-size: 1em;
+             color: midnightblue;
+             margin-top: 2em;
              text-align: center;
          }
          
          .welcome-btn{
-             padding: 2em 10em 0 10em;
+             padding: 2em 15em 0 15em;
              text-align: center;
+             text-transform: uppercase;
          }
          
          .welcome-btn .btn-block{
              margin-top: .8em;
-             color: #37a000;
-             color: navy;
-             color: tomato;
-             color: #ef7000;
-             color: dodgerblue;
              color: crimson;
-             border-color: #37a000;
-             border-color: tomato;
-             border-color: #ef7000;
-             border-color: dodgerblue;
              border-color: crimson;
              background-color: transparent;
          }
          
          .btn.btn-default.btn-block.register-btn{
-             background-color: #37a000;
-             background-color: tomato;
-             background-color: #ef7000;
-             background-color: dodgerblue;
-             background-color: crimson;
-                /*background-color: transparent;*/
-             color: #ff5252;
-             color: rebeccapurple;
-             color: white;
-           /*  color: #ef7000;*/
              
-             /*border-color: #ff5252;
-             border-color: rebeccapurple;*/
+             background-color: crimson;
+             color: white;
          }
          
          .more-info{
@@ -96,9 +98,13 @@
            /*background-color: lightcyan;*/
            
            color: #444;
-           border-top: 1px solid #ddd;
-           color: #494949;
+           /*border-top: 1px solid #ddd;*/
+           /*color: #494949;*/
            /*color: white;*/
+           /*border-top: 5px solid;*/
+           border-radius: 0;
+            /*box-shadow: 0px 0px 10px #dde;*/
+           
          }
          
          .more-info h3, .more-info h2{
@@ -108,6 +114,11 @@
              line-height: 2.5em;
              color: crimson;
          }
+         
+         .more-info.panel-default{
+             border-color: #fff;    
+         }
+         
          
     </style>
     
@@ -134,6 +145,7 @@
     <!--vendor-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app/plugins/typed.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-mocks/angular-mocks.js"></script>
@@ -149,6 +161,7 @@
     <script src="common/responseTransformer.js"></script>
     <script src="common/testAPI.js"></script>
     <script src="common/user.js"></script>
+    <script src="common/scroll.js"></script>
     
     <!--app-->
     <script src="app/app.js"></script>

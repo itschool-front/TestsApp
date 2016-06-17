@@ -4,14 +4,14 @@
     angular.module('app', ['app.commonServices', 'ui.router',  'app.login'/*, 'app.testAPIMock'*/])
         .config(function ($stateProvider, $urlRouterProvider) {
 
-            /*$urlRouterProvider.otherwise("/welcome");*/
+            $urlRouterProvider.otherwise("/welcome");
 
             $stateProvider
 
                 .state('welcome', {
                     url: '/welcome',
                     views: {
-                        "header": { templateUrl: "app/partials/header.html" },
+                        /*"header": { templateUrl: "app/partials/header.html" },*/
                         "content": { templateUrl: "app/partials/welcome.html", controller: "welcomeController as vm" }
                     },
                     
