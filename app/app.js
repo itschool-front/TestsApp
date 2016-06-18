@@ -27,7 +27,7 @@
                 })
                 
                 
-                .state('app.login', {
+                .state('welcome.login', {
                     url: '/login',
                     templateUrl: 'app/login/login.html',
                     controller: "loginController as vm"
