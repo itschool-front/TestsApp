@@ -278,8 +278,8 @@
     
      body{
      
-      background-image: url('../img/blue-poli-back-20.jpg');
-      background-size: 250%;
+      background-image: url('../img/blue-poli-back-20-small.jpg');
+      background-size: 100%;
       background-position: center;
      
     }  
@@ -289,8 +289,8 @@
     
     
     .welcome-jumb{
-        background-image: url('../img/blue-poli-back-20.jpg');
-        background-size: 180% 100%;
+        background-image: url('../img/blue-poli-back-20-small.jpg');
+        background-size: 100%;
         background-position: left top;
         padding-bottom: 50px;
      
@@ -353,7 +353,7 @@
     
     body{
      
-      background-image: url('../img/blue-poli-back-20.jpg');
+      background-image: url('../img/blue-poli-back-20-small.jpg');
       background-size: cover;
       background-position: right bottom;
      
@@ -362,8 +362,8 @@
     
     
     .welcome-jumb{
-        background-image: url('../img/blue-poli-back-20.jpg');
-        background-size: 200% 100%;
+        background-image: url('../img/blue-poli-back-20-small.jpg');
+        background-size: 100%;
         background-position: left top;
         padding-bottom: 50px;
      
