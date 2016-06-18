@@ -1,6 +1,6 @@
  body{
       padding-top: 50px;
-      background-image: url('../img/blue-poli-back-20.png');
+      background-image: url('../img/blue-poli-back-20.jpg');
       background-size: cover;
       background-size: 100%;
       background-position: left top;
@@ -49,7 +49,7 @@
  /*Jumbo message*/
  
  .welcome-jumb{
-     background-image: url('../img/blue-poli-back-20.png');
+     background-image: url('../img/blue-poli-back-20.jpg');
      background-size: 100% 100%;
      background-position: top;
      padding-bottom: 50px;
@@ -242,7 +242,7 @@
 @media only screen and (max-width: 955px){
     
     .welcome-jumb{
-        background-image: url('../img/blue-poli-back-20.png');
+        background-image: url('../img/blue-poli-back-20.jpg');
         background-size: 150% 100%;
         background-position: left top;
         padding-bottom: 50px;
@@ -278,7 +278,7 @@
     
      body{
      
-      background-image: url('../img/blue-poli-back-20.png');
+      background-image: url('../img/blue-poli-back-20.jpg');
       background-size: 250%;
       background-position: center;
      
@@ -289,7 +289,7 @@
     
     
     .welcome-jumb{
-        background-image: url('../img/blue-poli-back-20.png');
+        background-image: url('../img/blue-poli-back-20.jpg');
         background-size: 180% 100%;
         background-position: left top;
         padding-bottom: 50px;
@@ -353,7 +353,7 @@
     
     body{
      
-      background-image: url('../img/blue-poli-back-20.png');
+      background-image: url('../img/blue-poli-back-20.jpg');
       background-size: cover;
       background-position: right bottom;
      
@@ -362,7 +362,7 @@
     
     
     .welcome-jumb{
-        background-image: url('../img/blue-poli-back-20.png');
+        background-image: url('../img/blue-poli-back-20.jpg');
         background-size: 200% 100%;
         background-position: left top;
         padding-bottom: 50px;
