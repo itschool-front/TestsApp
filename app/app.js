@@ -11,7 +11,7 @@
                 .state('welcome', {
                     url: '/welcome',
                     views: {
-                        /*"header": { templateUrl: "app/partials/header.html" },*/
+                        "header": { templateUrl: "app/partials/header.html" },
                         "content": { templateUrl: "app/partials/welcome.html", controller: "welcomeController as vm" }
                     },
                     
