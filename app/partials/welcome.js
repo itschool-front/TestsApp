@@ -5,7 +5,7 @@
         function welcomeController($location, $anchorScroll, anchorSmoothScroll) {
             var vm = this;
             
-            vm.showLoginForm = false;
+            
             
            
             /*vm.gotoMore = function(){
