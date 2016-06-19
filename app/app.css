@@ -1,11 +1,11 @@
  body{
       padding-top: 50px;
-      background-image: url('../img/laptop-bg-bottom.jpg');
+  /*    background-image: url('../img/laptop-bg-bottom.jpg');
       background-size: cover;
       background-size: unset;
       background-position: left bottom;
       
-      background-attachment:  fixed;
+      background-attachment:  fixed;*/
  }  
  
  
@@ -24,7 +24,7 @@
  }
  
  .navbar-default .navbar-brand:hover{
-     background-color: #007588;
+     background-color: #84e0e0;
      color: white;
  }
  
@@ -35,7 +35,7 @@
  }
  
  .navbar-default .navbar-nav > li > a:hover{
-     background-color: #007588;
+     background-color: #84e0e0;
      color: white;
  }
  
@@ -132,8 +132,12 @@
      font-size: 1.2em;
      padding-top: 6em;
      padding-bottom: 6em;
-     background-color: #007588;
-     color: white;
+     background-color: #84e0e0;
+     color: #444;
+ }
+ 
+ .table-row .table > tbody > tr > td{
+     border-top: 1px solid white;
  }
 
  
@@ -146,12 +150,12 @@
      font-size: 35px;
  }
  
- .table-row h2 {
-  
-     color:  white;
-  
- }
-
+ 
+.table-row + .row{
+     background-image: url('../img/laptop-bg-bottom.jpg');
+      background-size: auto 100%;
+      background-attachment: fixed;
+}
 
                
 
@@ -162,6 +166,7 @@
     color: white;
     font-family: 'Ubuntu Condensed', sans-serif;
     /*background-color: azure;*/
+     
            
 }
        
@@ -285,11 +290,19 @@
 @media only screen and (max-width: 768px){
     
     
-    
+   /* 
     .welcome-jumb{
         background-image: url('../img/laptop-blue-10-md.jpg');
         background-size: unset;
         background-position: center top;
+        padding-bottom: 50px;
+     
+    }*/
+    
+     .welcome-jumb{
+        background-image: url('../img/laptop-blue-10.jpg');
+        background-size: unset;
+        background-position: center bottom;
         padding-bottom: 50px;
      
     }
@@ -340,12 +353,18 @@
 
 
 @media only screen and (max-width: 558px){
-      .welcome-jumb{
- 
-        padding-bottom: 20px;
+    
+      
+    .welcome-jumb{
+        background-image: url('../img/laptop-blue-10-md.jpg');
+        background-size: unset;
+        background-position: right top;
+        padding-bottom: 50px;
      
     }
     
+    
+  
        .welcome #typed{
         font-size: 35px;
         margin-top: 50px;
@@ -386,7 +405,7 @@
         background-image: url('../img/laptop-blue-10-md.jpg');
         
         background-size:  unset;
-        background-position: right bottom;
+        background-position: center bottom;
         padding-bottom: 50px;
      
     }
