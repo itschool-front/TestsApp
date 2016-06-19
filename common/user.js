@@ -10,7 +10,7 @@
             phone: "777-77-77",
             email: "ertert@erter.com",
             password: "4545123122",
-            isLoggedIn: false
+            isLoggedIn: true
         };
 
     }

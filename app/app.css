@@ -1,5 +1,5 @@
  body{
-      padding-top: 50px;
+      padding-top: 47px;
   /*    background-image: url('../img/laptop-bg-bottom.jpg');
       background-size: cover;
       background-size: unset;
@@ -13,7 +13,7 @@
  /*Navigation*/
  
  .navbar.navbar-default.navbar-fixed-top{
-     box-shadow: 0px 6px 9px rgba(0,0,0,.2);
+        box-shadow: 0px 6px 9px rgba(0,0,0,.2);
      border: none;
      background-color: white;
  }
@@ -24,7 +24,7 @@
  }
  
  .navbar-default .navbar-brand:hover{
-     background-color: #84e0e0;
+     background-color: #a4e0e0;
      color: white;
  }
  
@@ -35,7 +35,7 @@
  }
  
  .navbar-default .navbar-nav > li > a:hover{
-     background-color: #84e0e0;
+     background-color: #a4e0e0;
      color: white;
  }
  
@@ -132,7 +132,7 @@
      font-size: 1.2em;
      padding-top: 6em;
      padding-bottom: 6em;
-     background-color: #84e0e0;
+     background-color: #a4e0e0;
      color: #444;
  }
  
