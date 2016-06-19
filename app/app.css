@@ -19,29 +19,29 @@
  }
  
  .navbar-default .navbar-brand{
-     color:  cadetblue;
+     color:  #007588;
      font-family: 'Ubuntu Condensed', sans-serif;
  }
  
  .navbar-default .navbar-brand:hover{
-     background-color: cadetblue;
+     background-color: #007588;
      color: white;
  }
  
  .navbar-default .navbar-nav > li > a{
-     color: cadetblue;
+     color: #007588;
      font-family: 'Ubuntu Condensed', sans-serif;
      text-transform: uppercase;
  }
  
  .navbar-default .navbar-nav > li > a:hover{
-     background-color: cadetblue;
+     background-color: #007588;
      color: white;
  }
  
  .navbar-default .navbar-nav > li > a:focus{
      background-color: white;
-     color: cadetblue;
+     color: #007588;
  }
  
  
@@ -132,7 +132,7 @@
      font-size: 1.2em;
      padding-top: 6em;
      padding-bottom: 6em;
-     background-color: cadetblue;
+     background-color: #007588;
      color: white;
  }
 
@@ -176,7 +176,7 @@
 
 .glyphicon-share {
     margin-left: -2.8em;
-    color: cadetblue;
+    color: #007588;
 }
 
 
@@ -274,7 +274,7 @@
         text-align: right;
         padding-right: 1.5em;
         margin: 0;
-        color: cadetblue;
+        color: #007588;
         font-family: 'Ubuntu Condensed', sans-serif;
         font-size: 30px;
     }
@@ -309,7 +309,7 @@
         text-align: center;
         padding-right: 0;
         margin: 0 0 20px 0;
-        color: cadetblue;
+        color: #007588;
         font-family: 'Ubuntu Condensed', sans-serif;
         font-size: 35px;
     }
