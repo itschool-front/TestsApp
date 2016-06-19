@@ -201,6 +201,11 @@
     margin-left: 2em;
 }
 
+.form-btn .home-btn:active, .form-btn .home-btn:focus{
+    width: 20%;
+    margin-top: 40px;
+}
+
 
 
 
