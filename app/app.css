@@ -1,6 +1,6 @@
  body{
       padding-top: 50px;
-      background-image: url('../img/blue-poli-back-20.jpg');
+      background-image: url('../img/blue-poli-back-20-1.png');
       background-size: cover;
       background-size: 100%;
       background-position: left top;
@@ -13,9 +13,9 @@
  /*Navigation*/
  
  .navbar.navbar-default.navbar-fixed-top{
-     box-shadow: 0px 3px 7px rgba(0,0,0,.2);
+     box-shadow: 0px 6px 9px rgba(0,0,0,.2);
      border: none;
-     background-color: whitesmoke;
+     background-color: azure;
  }
  
  .navbar-default .navbar-brand{
@@ -49,9 +49,9 @@
  /*Jumbo message*/
  
  .welcome-jumb{
-     background-image: url('../img/blue-poli-back-20.jpg');
-     background-size: 100% 100%;
-     background-position: top;
+     background-image: url('../img/laptop-blue-10.jpg');
+     background-size: cover;
+     background-position: top right;
      padding-bottom: 50px;
      
  }
@@ -60,7 +60,7 @@
  
  .welcome #typed{
      font-family: 'Oswald', Arial, Helvetica, sans-serif;
-     color: whitesmoke;
+     color: white;
      display: block;
      text-align: center;
      font-size: 75px;
@@ -71,7 +71,7 @@
  
  .welcome p{
      font-size: 2.5em;
-     color: whitesmoke;
+     color: white;
      margin-top: 20px;
      text-align: center;
      font-family: 'Ubuntu Condensed', sans-serif;
@@ -99,11 +99,12 @@
      margin: 10px auto;
      text-align: center;
      text-transform: uppercase;
-     width: 50%;
+     width: 30%;
+     border-radius: 30px;
  }
  
  .home-btn:hover{
-     box-shadow: 0px 0px 10px white;
+     box-shadow: 0px 0px 14px white;
      background-color: transparent;
      color: white;
      border: 2px solid  white;
@@ -115,7 +116,7 @@
 /*Read more, table & Login form*/
 
 .read-more {
-     background-color: whitesmoke;
+     background-color:   azure;
      padding-top: 6em;
      padding-bottom: 6em;
  }
@@ -138,7 +139,7 @@
      text-align: right;
      padding-right: 1.5em;
      margin: 0;
-     color: indigo;
+     color:  lightseagreen;
      font-family: 'Ubuntu Condensed', sans-serif;
      font-size: 35px;
  }
@@ -242,8 +243,8 @@
 @media only screen and (max-width: 955px){
     
     .welcome-jumb{
-        background-image: url('../img/blue-poli-back-20.jpg');
-        background-size: 150% 100%;
+        background-image: url('../img/laptop-blue-8.jpg');
+        background-size: cover;
         background-position: left top;
         padding-bottom: 50px;
      
@@ -278,9 +279,9 @@
     
      body{
      
-      background-image: url('../img/blue-poli-back-20-small.jpg');
-      background-size: 100%;
-      background-position: center;
+      background-image: url('../img/laptop-blue-8.jpg');
+      background-size: cover;
+      background-position: center bottom;
      
     }  
     
@@ -289,8 +290,8 @@
     
     
     .welcome-jumb{
-        background-image: url('../img/blue-poli-back-20-small.jpg');
-        background-size: 100%;
+        background-image: url('../img/laptop-blue-8.jpg');
+        background-size: cover;
         background-position: left top;
         padding-bottom: 50px;
      
@@ -353,7 +354,7 @@
     
     body{
      
-      background-image: url('../img/blue-poli-back-20-small-4.jpg');
+      background-image: url('../img/laptop-blue-8.jpg');
       background-size: cover;
       background-position: right bottom;
      
@@ -362,7 +363,7 @@
     
     
     .welcome-jumb{
-        background-image: url('../img/blue-poli-back-20-small-4.jpg');
+        background-image: url('../img/laptop-blue-8.jpg');
         background-size:  cover;
         background-position: left top;
         padding-bottom: 50px;
@@ -371,7 +372,7 @@
     
     .welcome #typed{
         font-size: 35px;
-        margin-top: 100px;
+        margin-top: 60px;
      }
      
      .welcome p{
@@ -379,4 +380,13 @@
         margin-top: 25px;
         margin-bottom: 20px;
     } 
+    
+    
+     .home-btn, .home-btn:active, .home-btn:focus, .home-btn:active:hover{
+  
+         margin: 5px auto;
+         padding: .2em;   
+         width: 60%;
+         font-size: 1em;
+    }
 }
