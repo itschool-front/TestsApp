@@ -50,9 +50,9 @@
  
  .welcome-jumb{
      background-image: url('../img/laptop-blue-10.jpg');
-     background-size: cover;
-     background-position: top right;
-     padding-bottom: 50px;
+     background-size:  unset;
+     background-position: bottom center;
+     padding-bottom: 70px;
      
  }
  
@@ -243,9 +243,9 @@
 @media only screen and (max-width: 955px){
     
     .welcome-jumb{
-        background-image: url('../img/laptop-blue-8.jpg');
-        background-size: cover;
-        background-position: left top;
+        background-image: url('../img/laptop-blue-10.jpg');
+        background-size: unset;
+        background-position: center bottom;
         padding-bottom: 50px;
      
     }
@@ -277,34 +277,22 @@
     
     
     
-     body{
-     
-      background-image: url('../img/laptop-blue-8.jpg');
-      background-size: cover;
-      background-position: center bottom;
-     
-    }  
-    
-    
-    
-    
-    
     .welcome-jumb{
-        background-image: url('../img/laptop-blue-8.jpg');
-        background-size: cover;
-        background-position: left top;
+        background-image: url('../img/laptop-blue-10-md.jpg');
+        background-size: unset;
+        background-position: center top;
         padding-bottom: 50px;
      
     }
     
     .welcome #typed{
         font-size: 45px;
-        margin-top: 150px;
+        margin-top: 100px;
      }
      
      .welcome p{
         font-size: 1.5em;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 20px;
     }
     
@@ -354,7 +342,7 @@
     
     body{
      
-      background-image: url('../img/laptop-blue-8.jpg');
+      background-image: url('../img/laptop-blue-10-md.jpg');
       background-size: cover;
       background-position: right bottom;
      
@@ -363,9 +351,9 @@
     
     
     .welcome-jumb{
-        background-image: url('../img/laptop-blue-8.jpg');
-        background-size:  cover;
-        background-position: left top;
+        background-image: url('../img/laptop-blue-10-md.jpg');
+        background-size:  unset;
+        background-position: center bottom;
         padding-bottom: 50px;
      
     }
