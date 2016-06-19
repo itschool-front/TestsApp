@@ -141,7 +141,7 @@
      text-align: right;
      padding-right: 1.5em;
      margin: 0;
-     color:  cadetblue;
+     color:  #007588;
      font-family: 'Ubuntu Condensed', sans-serif;
      font-size: 35px;
  }
@@ -168,9 +168,9 @@
         
         
 .login-form h3{
-    color: whitesmoke;
+    color: white;
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 2em;
+    font-size: 2.5em;
      text-align: center;
 }
 
@@ -319,7 +319,7 @@
     .login-form h3{
         color: whitesmoke;
         font-family: 'Ubuntu Condensed', sans-serif;
-        font-size: 1.5em;
+        font-size: 2em;
          text-align: center;
     }
     
@@ -350,12 +350,23 @@
         font-size: 35px;
         margin-top: 50px;
      }
+     
+     .login-form h3{
+ 
+    font-size: 1.5em;
+}
 }
 
 
 
 
 @media only screen and (max-width: 400px){
+    
+            
+.login-form h3{
+ 
+    font-size: 1.5em;
+}
     
     .login-form{
         padding: 1em;
