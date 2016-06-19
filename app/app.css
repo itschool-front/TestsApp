@@ -353,14 +353,14 @@
     .welcome-jumb{
         background-image: url('../img/laptop-blue-10-md.jpg');
         background-size:  unset;
-        background-position: left bottom;
+        background-position: right bottom;
         padding-bottom: 50px;
      
     }
     
     .welcome #typed{
         font-size: 35px;
-        margin-top: 85px;
+        margin-top: 60px;
      }
      
      .welcome p{
