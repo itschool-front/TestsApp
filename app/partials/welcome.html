@@ -45,7 +45,7 @@
         }
     </style>
 
-    <div class="row welcome-jumb">
+    <div id="page-top" class="row welcome-jumb">
 
 
         <div class="col-xs-12 col-md-10 col-xs-offset-0  col-md-offset-1 welcome">
@@ -176,17 +176,17 @@
 
 
 
-            <form class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 login-form">
+            <form name="loginForm" novalidate class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 login-form">
                 <h3>Зарегистрируйтесь для прохождения теста</h3>
                 <div ng-show="vm.message">{{vm.message}}</div>
                 <div class="form-group">
                     <label for="firstname">Имя</label>
-                    <input type="text" class="form-control" id="firstname" placeholder="Имя">
+                    <input ng-model="vm.user.firstName" type="text" class="form-control" id="firstname" placeholder="Имя">
                 </div>
 
                 <div class="form-group">
                     <label for="secondname">Фамилия</label>
-                    <input ng-model="vm.user.firstName" type="text" class="form-control" id="secondname" placeholder="Фамилия">
+                    <input ng-model="vm.user.lastName" type="text" class="form-control" id="secondname" placeholder="Фамилия">
                 </div>
 
                 <div class="form-group">
@@ -204,8 +204,8 @@
                 </div>
 
                 <div class="form-btn">
-                    <a href="" ng-click="vm.gotoElement('login-form')" class="btn btn-default home-btn">Регистрация</a>
-                    <a href="" ng-click="vm.gotoElement('more-info')" class="btn btn-default home-btn">Отмена</a>
+                    <a href="" ng-click="vm.login()" class="btn btn-default home-btn">Регистрация</a>
+                    <a href="" ng-click="vm.gotoElement('page-top')" class="btn btn-default home-btn">Отмена</a>
                 </div>
             </form>
 
@@ -217,6 +217,10 @@
 
     </div>
     <!--#sroll-area-->
+    
+    
+    
+    
 
     <script>
         $(function(){

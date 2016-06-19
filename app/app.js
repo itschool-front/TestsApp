@@ -7,6 +7,54 @@
             $urlRouterProvider.otherwise("/welcome");
 
             $stateProvider
+                
+                .state('app.available', {
+                    url: '/available',
+                    /*template: '<h1>Available</h1>'*/
+                    /*controller: "loginController as vm"*/
+                    templateUrl: "app/available/available.html",
+                    controller: "availableController as vm",
+                     resolve: {
+                        
+                        
+                        testsAvailableId: function (testAPI) {
+                            return testAPI.getTestsAvailable().then(function (data) {
+                                return data.data;
+                            });
+                        },
+                        
+
+                        testsAvailable: function ($q, testAPI, testsAvailableId) {
+
+                            var tests = [];
+
+                            testsAvailableId.forEach(function (testId) {
+                                
+                                var singleTest = testAPI.getSingleTest(testId)
+                                    .then(function (test) {
+                                       
+                                       test.data.questions.forEach(function (question) {
+                                            testAPI.getQuestionAnswers(question.id)
+                                                .then(function (answers) {
+                                                    question.answers = answers.data;
+                                                });
+                                        });
+                                        
+                                        return test;
+                                        
+                                    });
+                                    
+                               tests.push(singleTest)
+
+                            });
+
+                            return $q.all(tests);
+
+                        }
+                    }
+                   
+                })
+                
 
                 .state('welcome', {
                     url: '/welcome',
@@ -27,7 +75,7 @@
                 })
                 
                 
-                .state('welcome.login', {
+                .state('app.login', {
                     url: '/login',
                     templateUrl: 'app/login/login.html',
                     controller: "loginController as vm"
@@ -67,7 +115,7 @@
 
                 })//stste app.test end
 
-                .state('app.available', {
+              /* .state('app.available', {
                     url: "/available",
                     templateUrl: "app/available/available.html",
                     controller: "availableController as vm",
@@ -108,9 +156,9 @@
 
                             return $q.all(tests);
 
-                        }//testsAvailable
+                        }
                     }
-                });
+                });*/
         });
 
 

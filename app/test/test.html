@@ -1,49 +1,56 @@
-<div class="row" ng-if="vm.user.isLoggedIn">
-    
-    
-    <h2>{{vm.test.description}}</h2>
+<div class="single-test">
 
-<ul>
-    <li ng-repeat="question in vm.test.questions">
-        
-        {{question.description}}
-        
-        <img ng-if="question.picture" src="http://itschool.ocr-service.net:1337/question/picture/{{question.id}}">
-        
-       
-        
-        <ul ng-if="question.answerType == 'multi'">
-            <li ng-repeat="answer in question.answers track by $index">
-                <input type="checkbox" 
-                ng-true-value="{{ {test:vm.test.id, question: question.id, answer: answer.id} }}" 
-                ng-model="vm.multiAnswers[answer.id]">
-                {{answer.description}}                
+
+    <div ng-if="!vm.user.isLoggedIn()" class="row">
+
+        <ng-include src="'app/partials/login.html'"></ng-include>
+
+    </div>
+
+
+    <div class="row" ng-if="vm.user.isLoggedIn()">
+
+
+        <!-- <h2>{{vm.user.isLoggedIn()}}</h2>-->
+
+        <h2>{{vm.test.description}}</h2>
+
+        <ul>
+            <li ng-repeat="question in vm.test.questions">
+
+                {{question.description}}
+
+                <img ng-if="question.picture" src="http://itschool.ocr-service.net:1337/question/picture/{{question.id}}">
+
+
+
+                <ul ng-if="question.answerType == 'multi'">
+                    <li ng-repeat="answer in question.answers track by $index">
+                        <input type="checkbox" ng-true-value="{{ {test:vm.test.id, question: question.id, answer: answer.id} }}" ng-model="vm.multiAnswers[answer.id]">                        {{answer.description}}
+                    </li>
+                </ul>
+
+                <ul ng-if="question.answerType == 'single'">
+                    <li ng-repeat="answer in question.answers track by $index">
+                        <input type="radio" ng-value="{test: vm.test.id, question: question.id, answer: answer.id}" name="{{question.id}}" ng-model="vm.singleAnswers[question.id]">                        {{answer.description}}
+                    </li>
+                </ul>
+
+                <div ng-if="question.answerType == 'free'">
+                    <textarea name="free" id="" cols="30" rows="10"></textarea>
+                </div>
+
             </li>
         </ul>
-        
-        <ul  ng-if="question.answerType == 'single'">
-            <li ng-repeat="answer in question.answers track by $index">
-                <input type="radio" ng-value="{test: vm.test.id, question: question.id, answer: answer.id}" 
-                 name="{{question.id}}" ng-model="vm.singleAnswers[question.id]">
-                {{answer.description}}
-            </li>
-        </ul>
-        
-        <div ng-if="question.answerType == 'free'">
-            <textarea name="free" id="" cols="30" rows="10"></textarea>
-        </div>
-         
-    </li>
-</ul>
 
-<input type="button" ng-click="vm.submitAnswers()">
+        <input type="button" ng-click="vm.submitAnswers()" value="Готово!">
 
-<pre>
-{{ vm.multiAnswers | json }}
-{{vm.singleAnswers | json}}
-</pre>
 
-    
-    
+    </div>
+
+
+
+
+
+
 </div>
-

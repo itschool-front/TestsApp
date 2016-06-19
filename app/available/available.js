@@ -6,10 +6,16 @@
             
             
             var vm = this;
+            vm.message = "Tests available";
             
             vm.user = user;
             
             vm.tests = testsAvailable;
+            
+            vm.multiAnswers = {};
+            vm.singleAnswers = {};
+            
+            
             
             console.log(vm.tests);
         }

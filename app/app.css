@@ -205,6 +205,16 @@
 
 
 
+/*Single-test*/
+
+.single-test .login-form{
+    background-image: url('../img/laptop-bg-bottom.jpg');
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+
+
 @media only screen and (min-width: 1800px){
         .welcome #typed{
         font-size: 90px;

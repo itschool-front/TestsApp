@@ -4,13 +4,24 @@
         .factory('user', user);
 
     function user() {
+        
+        var isLoggedIn = false;
+        
         return {
             firstName: "Yuri-777",
-            secondName: "V",
+            lastName: "V",
             phone: "777-77-77",
             email: "ertert@erter.com",
             password: "4545123122",
-            isLoggedIn: true
+            
+            isLoggedIn: function () {
+                return isLoggedIn;
+            },
+            
+            login: function (loginResponse) {
+               isLoggedIn = loginResponse.token ? true : false;
+               return isLoggedIn;
+            }
         };
 
     }

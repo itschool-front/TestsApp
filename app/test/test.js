@@ -10,72 +10,82 @@
 
         vm.user = user;
 
-
         vm.test = singleTest;
-
-        console.log(vm.test);
-
+        
         vm.multiAnswers = [];
         vm.singleAnswers = [];
+
+        vm.loginResponse = {};
         
+        //Id of the test result
+        vm.testResultId;
+        vm.testResult;
+
+        vm.login = function () {
+
+            //check user data to be sent
+            console.log(vm.user);
+
+
+
+            //Get response from server
+            vm.loginResponse = testAPI.login(vm.user).then(function (data) {
+                //save response in model property
+                vm.loginResponse = data.data;
+                //Check if the server sent token 
+                vm.user.login(vm.loginResponse)
+            });
+            
+        }/*login*/
+
+
         
-        
-        
-
-
-        vm.answerComplete =
-{
-	"header": {
-		"fName": "Yuri-777",
-		"sName": "V",
-		"phone": "777-77-77",
-		"email": "a@a.com"
-	},
-	"answers": [{
-		"test": 5,
-		"question": 4,
-		"answer": 3
-	}, {
-		"test": 5,
-		"question": 5,
-		"answer": 4
-	}, {
-		"test": 5,
-		"question": 6,
-		"answer": 1
-	}]
-}
-
-        var user = {
-            fName: "Yuri-777",
-		    sName: "V",
-		    phone: "777-77-77",
-		    email: "a@a.com"
-        }
-
-/*var x = {"header":{"fName":"Yuri-777","sName":"V","phone":"777-77-77","email":"a@a.com"},"answers":[{"test":5,"question":5,"answer":8},{"test":5,"question":5,"answer":10},{"test":5,"question":5,"answer":12},{"test":5,"question":9,"answer":27},{"test":5,"question":9,"answer":30},{"test":5,"question":4,"answer":5},{"test":5,"question":6,"answer":14},{"test":5,"question":7,"answer":21},{"test":5,"question":8,"answer":26},{"test":5,"question":13,"answer":47}]};
-  */     
-
-
 
 
 
         vm.submitAnswers = function () {
             
-            var request = {
-                header: user,
-                answers:  _.compact(_.concat(vm.multiAnswers, vm.singleAnswers))
-            }
+            /**
+             * Transform request to a suitable for an API form
+             * TO DO: move this to requestTransformers factory <----- !!!
+             */
             
-            request = JSON.stringify(request);
+            var myHeader = {
+                fName: user.firstName,
+                sName: user.lastName,
+                phone: user.phone,
+                email: user.email
+            };
             
-            var response = testAPI.submitTestAnswers(request)
-                .then(function (response) {
-                    console.log(response);
+            vm.request = {
+                header: myHeader,
+                answers: _.compact(_.concat(vm.multiAnswers, vm.singleAnswers))
+            };
+            
+            console.log(vm.request);
+                       
+            testAPI.submitTestAnswers(vm.request)
+                .then(function (data) {
+                    vm.testResultId = data.data.id;
+                    
+                    testAPI.getTestResult(vm.testResultId)
+                        .then(function(data){
+                            console.log(data);
+                        });
                 });
-        }
+                
+            }/*Submit answers*/
+            
+            
+            
+            
+            
+            
+            
+            
 
+        }/*controller*/
+    
 
-
-    }
+    
 })()
