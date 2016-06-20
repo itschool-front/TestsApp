@@ -1,26 +1,50 @@
 
-
 <div class="col-sm-4 col-xs-1 hidden-xs fixed">
     <perfect-scrollbar class="scroller" wheel-propagation="false" wheel-speed="1" min-scrollbar-length="20">
-    <ul>
-        <li ng-repeat="test in vm.tests">
-            
-            <h4>{{test.data.description}}</h4>
+        <div ng-if="!vm.showResults">
+
             <ul>
-                <li ng-repeat="question in test.data.questions"><a href="" 
-                ng-click="vm.gotoElement(test.data.id + '-' + question.id, 72)">{{question.description}}</a></li>
+                <li ng-repeat="test in vm.tests">
+
+                    <h4>{{test.data.description}}</h4>
+                    <ul>
+                        <li ng-repeat="question in test.data.questions"><a href="" ng-click="vm.gotoElement(test.data.id + '-' + question.id, 72)">{{question.description}}</a></li>
+                    </ul>
+
+                </li>
             </ul>
-            
-        </li>
-    </ul>
-    <perfect-scrollbar>
-    
-    
+
+        </div>
+
+
+        <div class="show-results" ng-if="vm.showResults" style="margin-top: 50px;">
+
+          
+           <h3>Результаты теста:</h3>
+           <hr>
+           <ul style="list-style: none">
+               <li><strong>{{vm.user.firstName +' '}}{{vm.user.lastName}}</strong></li>
+           </ul>
+           
+           <ul>
+               <li><strong>Всего вопросов:</strong>{{' '+vm.serverResponse.allQuestions}}</li>
+               <li><strong>Всего ответов:</strong>{{' '+vm.serverResponse.allAnswers}}</li>
+               <li><strong>Правильно отвеченых вопросов:</strong>{{' '+vm.serverResponse.correctQuestion}}</li>
+               <li><strong>Всего правильных ответов:</strong>{{' '+vm.serverResponse.correctAnswers}}</li>
+               <!--<li><strong>Процент выполнения теста:</strong>{{''+vm.serverResponse.executionPercentage}}</li>-->
+           </ul>
+           <hr>
+             <a href="" class="btn btn-danger" ui-sref="app.available" style="color: white" >Попробовать ещё</a>
+           
+
+        </div>
+
+
+
+        <perfect-scrollbar>
+
+
 </div>
-
-
-
-
 
 
 
@@ -70,10 +94,21 @@
             
             <div class="submit-test">
                  <hr>
-                <a href="" class="btn btn-danger">Проверить результат</a>
+                <a href="" class="btn btn-danger" ng-click="vm.submitAnswers()" >Проверить результат</a>
+                
             </div>
 
 
 
 </div>
+<!--
+<div style="margin: 150px 0 0 500px">
+    <pre>
+    Multiple answers: {{vm.multiAnswers}}
+    Single answers: {{vm.singleAnswers}}
+    Request to server: {{vm.request}}
+    Server response:  {{vm.serverResponse}}
+    </pre>
+  
+</div>-->
 

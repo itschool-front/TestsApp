@@ -26,13 +26,15 @@
 
                 <ul ng-if="question.answerType == 'multi'">
                     <li ng-repeat="answer in question.answers track by $index">
-                        <input type="checkbox" ng-true-value="{{ {test:vm.test.id, question: question.id, answer: answer.id} }}" ng-model="vm.multiAnswers[answer.id]">                        {{answer.description}}
+                        <input type="checkbox" ng-true-value="{{ {test:vm.test.id, question: question.id, answer: answer.id} }}" ng-model="vm.multiAnswers[answer.id]">
+                        {{answer.description}}
                     </li>
                 </ul>
 
                 <ul ng-if="question.answerType == 'single'">
                     <li ng-repeat="answer in question.answers track by $index">
-                        <input type="radio" ng-value="{test: vm.test.id, question: question.id, answer: answer.id}" name="{{question.id}}" ng-model="vm.singleAnswers[question.id]">                        {{answer.description}}
+                        <input type="radio" ng-value="{test: vm.test.id, question: question.id, answer: answer.id}" name="{{question.id}}" ng-model="vm.singleAnswers[question.id]">,
+                        {{answer.description}}
                     </li>
                 </ul>
 
