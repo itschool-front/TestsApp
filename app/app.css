@@ -283,16 +283,21 @@
 span.quest-num{
     display: inline-block;
     color: white;
-    background-color:  crimson;
+    background-color: #d9534f;
     padding: .1em .2em;
     margin: 0 .5em 0 0;
-    border-radius: 3px;
+    border-radius: 2px;
     width: 1em;
     text-align: right;
     font-family:  Arial, Helvetica, sans-serif;
     font-size: .8em; 
+    box-sizing:  border-box;  
 }
 
+.submit-test{
+    margin-top: -10em;
+    margin-bottom: 10em;
+}
 
 
 
@@ -356,6 +361,10 @@ span.quest-num{
 }
 
 
+
+.test-wrapper{
+    margin-bottom: 10em;
+}
 
 
 

@@ -28,11 +28,11 @@
 <div class="col-xs-12 col-sm-8 nonfixed">
 
     
-        <div ng-repeat="test in vm.tests">
-            
+        <div class="test-wrapper" ng-repeat="test in vm.tests">
+            <div id="{{test.data.description}}"></div>
                  <h3>{{test.data.description}}</h3>
             
-                <div id="{{test.data.description}}"></div>
+                
                 <ul class="list-group">
                     <li class="list-group-item" ng-repeat="question in test.data.questions">
                         <div id="{{test.data.id}}-{{question.id}}"></div>
@@ -64,6 +64,13 @@
                 </ul>
 
 
+            </div>
+            
+           
+            
+            <div class="submit-test">
+                 <hr>
+                <a href="" class="btn btn-danger">Проверить результат</a>
             </div>
 
 
