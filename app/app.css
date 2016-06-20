@@ -212,6 +212,10 @@
 
 /*-------------- Single-test ------------*/
 
+.content{
+    background-color: #cef2f2;
+}
+
 .single-test .login-form{
     background-image: url('../img/laptop-bg-bottom.jpg');
     background-size: cover;
@@ -222,11 +226,84 @@
 .fixed{
     position: fixed;
     height: 100%;
+    background-color: white;
 }
 
 .nonfixed{
-    margin-left: 30%;
+    margin-left: 35%;
     margin-top: 40px
+}
+
+.nonfixed h4{
+    color: #007588;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+.nonfixed h3{
+    color: #007588;
+}
+
+.nonfixed ul{
+   list-style: none;     
+}
+
+.nonfixed hr{
+    border-color: aliceblue;
+     margin-top: .7em;
+}
+
+.nonfixed textarea{
+   margin: 1em;
+   width:70%;
+   border: 1px solid  #007588;
+   margin-left: unset;
+}
+
+
+.nonfixed img{
+    width: 70%;
+    margin-bottom: 3em;
+}
+
+.nonfixed .answer{
+    margin-bottom: .3em;
+}
+
+
+@media only screen and (max-width: 768px){
+    
+    .nonfixed{
+        margin-top: unset;
+        margin-left: 0;
+        margin-right: 3%;
+    }
+}
+
+span.quest-num{
+    display: inline-block;
+    color: white;
+    background-color:  crimson;
+    padding: .1em .2em;
+    margin: 0 .5em 0 0;
+    border-radius: 3px;
+    width: 1em;
+    text-align: right;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: .8em; 
+}
+
+
+
+
+
+
+
+
+.fixed ul{
+    color: #007588;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .fixed h4{
@@ -242,9 +319,27 @@
 
 
 .fixed h4 + ul>li{
-    padding-bottom: .1em;
-    color:  #444;
+    padding-bottom: 1em;
 }
+
+.fixed a{
+    color: #444;
+}
+
+
+.fixed a:hover{
+    color: #444;
+    text-decoration: none;
+    background-color: #a4e0e0;
+}
+
+
+.fixed a:active, .fixed a:focus{
+    color: #444;
+    text-decoration: none;
+    background-color: #a4e0e0;
+}
+
 
 
 .scroller {
@@ -253,6 +348,17 @@
     overflow-y: hidden;
     position: relative;
 }
+
+/*Right Panel*/
+.list-group-item{
+    background-color: transparent;
+    border: none;   
+}
+
+
+
+
+
 
 
 
