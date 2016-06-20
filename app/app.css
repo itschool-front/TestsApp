@@ -65,7 +65,7 @@
      display: block;
      text-align: center;
      font-size: 75px;
-     margin-top: 150px;
+     margin-top: 80px;
  }
  
  
@@ -210,7 +210,7 @@
 
 
 
-/*Single-test*/
+/*-------------- Single-test ------------*/
 
 .single-test .login-form{
     background-image: url('../img/laptop-bg-bottom.jpg');
@@ -218,6 +218,46 @@
     background-attachment: fixed;    
 }
 
+
+.fixed{
+    position: fixed;
+    height: 100%;
+}
+
+.nonfixed{
+    margin-left: 30%;
+    margin-top: 40px
+}
+
+.fixed h4{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color:  #007588;
+    list-style: none;
+    margin-top: 5em;
+}
+
+.fixed h4 + ul>li{
+   list-style: none;
+}
+
+
+.fixed h4 + ul>li{
+    padding-bottom: .1em;
+    color:  #444;
+}
+
+
+.scroller {
+    white-space: normal;
+    height: 90%;
+    overflow-y: hidden;
+    position: relative;
+}
+
+
+
+
+/*------------ Media queries --------------*/
 
 
 @media only screen and (min-width: 1800px){

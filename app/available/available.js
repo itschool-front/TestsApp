@@ -1,8 +1,8 @@
 (function () {
     angular.module('app')
-        .controller('availableController', ['testsAvailable', 'user', availableController]);
+        .controller('availableController', ['testsAvailable', 'user', 'anchorSmoothScroll', availableController]);
         
-        function availableController(testsAvailable, user) {
+        function availableController(testsAvailable, user, anchorSmoothScroll) {
             
             
             var vm = this;
@@ -18,5 +18,15 @@
             
             
             console.log(vm.tests);
+            
+            
+             vm.gotoElement = function (eID, offset){
+            /*$location.hash('bottom');*/
+                anchorSmoothScroll.scrollTo(eID, offset);
+                console.log('click');
+            };
+            
+            
+            
         }
 })()

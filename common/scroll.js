@@ -3,14 +3,16 @@ var app = angular.module('app.commonServices');
 
 app.service('anchorSmoothScroll', function(){
     
-    this.scrollTo = function(eID) {
-
+    this.scrollTo = function(eID, offset) {
+            
+            console.log(eID, offset);
         
         var startY = currentYPosition();
-        var stopY = elmYPosition(eID);
+        var stopY = offset ? (elmYPosition(eID) - offset) : elmYPosition(eID);
         var distance = stopY > startY ? stopY - startY : startY - stopY;
+        
         if (distance < 100) {
-            scrollTo(0, stopY); return;
+            scrollTo(0, stopY+offset); return;
         }
         var speed = Math.round(distance / 10);
         if (speed >= 20) speed = 20;

@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module('app', ['app.commonServices', 'ui.router',  'app.login'/*, 'app.testAPIMock'*/])
+    angular.module('app', ['app.commonServices', 'ui.router',  'app.login', 'perfect_scrollbar' /*, 'app.testAPIMock'*/])
         .config(function ($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise("/welcome");
@@ -10,8 +10,6 @@
                 
                 .state('app.available', {
                     url: '/available',
-                    /*template: '<h1>Available</h1>'*/
-                    /*controller: "loginController as vm"*/
                     templateUrl: "app/available/available.html",
                     controller: "availableController as vm",
                      resolve: {

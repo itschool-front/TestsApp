@@ -5,7 +5,7 @@
 
     function user() {
         
-        var isLoggedIn = false;
+        var isLoggedIn = true;
         
         return {
             firstName: "Yuri-777",
